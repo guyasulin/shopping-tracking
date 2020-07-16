@@ -1,0 +1,16 @@
+::ng-deep{
+    .items-container {
+        .mat-tab-group {
+          padding: 20px;
+          width: max-content;
+      
+          .mat-tab-header {
+            margin-bottom: 25px;
+      
+              .mat-tab-label {
+                border: 1px solid rgba(0,0,0,.12);
+              }
+          }
+        }
+      }
+}

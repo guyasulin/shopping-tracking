@@ -1,0 +1,35 @@
+<div class="add-item">
+  <h1>Add Item</h1>  
+  <form class="example-form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <mat-form-field class="col-12" appearance="fill">
+      <mat-label>Item Name</mat-label>
+      <input matInput type="text" name="itemName" placeholder="Name" required ngModel>
+    </mat-form-field>
+
+    <mat-form-field class="col-12" appearance="fill">
+      <mat-label>Online Store</mat-label>
+      <input matInput type="text" name="onlineStore" placeholder="Online Store" required ngModel>
+    </mat-form-field>
+
+    <div class="full-with">
+      <mat-form-field class="col-6" appearance="fill">
+        <mat-label>Price</mat-label>
+        <input matInput type="number" name="price"  placeholder="Price" required  ngModel>
+      </mat-form-field>
+
+      <mat-form-field class="col-6"  appearance="fill">
+          <mat-label>Delivery Date</mat-label>
+          <input matInput type="date" name="deliveryDate" placeholder="delivery Date" required ngModel>
+        </mat-form-field> 
+    </div>
+
+    <div class="footer-btn">
+      <button mat-raised-button class="btn-back" [routerLink]="['/home']">Back To List
+        <mat-icon>keyboard_backspace</mat-icon>
+      </button>
+      <button mat-raised-button class="btn-add" type="submit" [disabled]="f.invalid" >Add Item
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </form>
+</div>

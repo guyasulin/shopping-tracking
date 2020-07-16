@@ -1,0 +1,24 @@
+.navbar {
+
+  .title {
+    cursor: pointer;
+  }
+
+  .element-item {
+    cursor: pointer;
+    margin: 0 5px;
+  }
+
+  .menu {
+    vertical-align: middle;
+    margin: 0 5px;
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .element-item-mob {
+    padding: 10px 0;
+  }
+}

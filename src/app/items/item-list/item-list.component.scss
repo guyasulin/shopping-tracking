@@ -1,0 +1,38 @@
+.list-item {
+  .add-item {
+    display: inline-block;
+    color: white;
+    border-radius: 2px;
+    background: #00800091;
+    margin-bottom: 15px;
+  }
+
+  .container-item-list {
+    
+    .card {
+      max-width: 400px;
+      margin-bottom: 10px;
+
+      .mat-card-header {
+        ::ng-deep {
+          .mat-card-header-text {
+            width: 100%;
+          }
+        }
+
+        .mat-card-actions {
+          display: flex;
+          margin: 0;
+          align-items: flex-end;
+        }
+      }
+    }
+
+    .mat-card-actions {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+}
+

@@ -1,0 +1,27 @@
+<div class="navbar" style="height: 100vh;">
+  <mat-toolbar color="primary">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <div (click)="sidenav.toggle()">
+        <mat-icon class="menu">menu</mat-icon>
+      </div>
+    </div>
+    <span class="title" routerLink="/home">  {{ title }}  </span> <span class="example-spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <span class="element-item" routerLink="/home" mat-button>Item-List </span>
+      <span class="element-item" routerLink="/items/received" mat-button> Received </span>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill class="example-container">
+    <mat-sidenav #sidenav style="padding: 10px;" fxLayout="column">
+      <div fxLayout="column">
+        <div (click)="sidenav.toggle()" >
+          <mat-icon>close</mat-icon>
+        </div>
+        <div class="element-item-mob" routerLink="/home" mat-button>List-Item</div>
+        <div class="element-item-mob" routerLink="/items/received" mat-button>Received</div>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill><router-outlet></router-outlet></mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
