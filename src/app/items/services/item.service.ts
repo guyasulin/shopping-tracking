@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient,  HttpErrorResponse } from '@angular/common/http';
+import { HttpClient,  HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { throwError,  Subject, of } from 'rxjs';
 import { Currency, Rates } from '../models/currency.model';
 import { catchError } from 'rxjs/operators';
@@ -22,7 +22,8 @@ export class ItemService {
 	}
 
 	apiCall() {
-		this.http.get<Currency>(this.currencyUrl)
+		const headers = new HttpHeaders({ 'Content-Type': 'application/json' , 'Access-Control-Allow-Origin': '*' })
+		return this.http.get<Currency>(this.currencyUrl, {headers})
 			.pipe(
 				catchError((err) => {
 					return throwError(err);
