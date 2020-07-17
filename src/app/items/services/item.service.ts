@@ -22,7 +22,7 @@ export class ItemService {
 	}
 
 	apiCall() {
-		const headers = new HttpHeaders({ 'Content-Type': 'application/json' , 'Access-Control-Allow-Origin': '*' })
+		const headers = new HttpHeaders({ 'Content-Type': 'application/javascript' , 'Access-Control-Allow-Origin': '*' })
 		return this.http.get<Currency>(this.currencyUrl, {headers})
 			.pipe(
 				catchError((err) => {
