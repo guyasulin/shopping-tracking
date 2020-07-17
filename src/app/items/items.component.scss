@@ -2,11 +2,11 @@
     .items-container {
         .mat-tab-group {
           padding: 20px;
-          width: max-content;
       
           .mat-tab-header {
-            margin-bottom: 25px;
-      
+            border-bottom: none;;
+            margin-bottom: 20px;
+            
               .mat-tab-label {
                 border: 1px solid rgba(0,0,0,.12);
               }

@@ -8,16 +8,24 @@
   }
 
   .container-item-list {
-    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 65%;
+    margin: auto;
+
     .card {
-      max-width: 400px;
-      margin-bottom: 10px;
+      margin: 0 20px 20px;
 
       .mat-card-header {
         ::ng-deep {
           .mat-card-header-text {
             width: 100%;
           }
+        }
+
+        .loding-cur {
+          display: inline-block;
         }
 
         .mat-card-actions {
@@ -33,6 +41,4 @@
       justify-content: flex-end;
     }
   }
-
 }
-

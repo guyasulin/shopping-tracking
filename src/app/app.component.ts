@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ItemService } from './items/services/item.service';
 
 @Component({
@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'Shopping Tracking List';
 
   constructor( public itemService:ItemService) {
-    this.itemService.getCurrencyData();
+    this.itemService.getCurrencyData()
     
   }
 

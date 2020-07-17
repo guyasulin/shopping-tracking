@@ -27,7 +27,6 @@ export interface ItemState{
     initialState,
       on(ItemActions.addItem, (state, action) => {
         const {items} = state;
-        console.log(action.item)
         const id = items[items.length - 1] ? items[items.length - 1].id + 1 : 1; 
         const newItem = {
           ...action.item,
@@ -35,7 +34,6 @@ export interface ItemState{
         }
         const newItems = [...items];
         newItems.push(newItem);
-        console.log(newItems);
         return {
           ...state,
         items: newItems
