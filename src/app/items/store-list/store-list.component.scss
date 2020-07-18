@@ -7,8 +7,12 @@
 
   .card {
     margin: 0 20px 20px;
-    width: min-content;
+    min-width: 25%;
     
+    .loding-cur {
+      display: inline-block;
+    }
+
     .mat-card-header {
       ::ng-deep {
         .mat-card-header-text {

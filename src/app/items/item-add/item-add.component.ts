@@ -1,4 +1,4 @@
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Store } from '@ngrx/store';
@@ -12,7 +12,7 @@ import * as fromAction from '../item-list/store/item.action';
 })
 export class ItemAddComponent implements OnInit {
 	
-	constructor(private store: Store<ItemState>, private route: ActivatedRoute,   private router: Router) {}
+	constructor(private store: Store<ItemState>, private router: Router) {}
 
 	ngOnInit(): void {}
 

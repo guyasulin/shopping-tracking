@@ -1,9 +1,11 @@
    <div class="store-list">
     <mat-card class="card" *ngFor="let store of storeList | keyvalue">
       <mat-card-header>
-        <mat-card-subtitle>{{ store.key }}</mat-card-subtitle>
+        <mat-card-subtitle>{{ store.key | titlecase }}</mat-card-subtitle>
         <mat-card-subtitle>{{ store.value | currency:"ILS":"symbol"}}</mat-card-subtitle>
-        <mat-card-subtitle>{{ store.value / currenyRate?.ILS  | currency:"USD":"symbol" }}</mat-card-subtitle>
+        <mat-card-subtitle>{{ store.value / currenyRate?.ILS  | currency:"USD":"symbol" }}
+          <div class="loding-cur" *ngIf="isLoading">Loading Currency Price...</div>
+        </mat-card-subtitle>
       </mat-card-header>
     </mat-card>
    </div>

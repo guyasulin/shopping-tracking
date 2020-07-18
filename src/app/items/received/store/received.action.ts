@@ -3,10 +3,10 @@ import { Item } from '../../models/item.model';
 
 
 export const getReceived  = createAction(
-  '[Received List Component] Get Received ',
+  '[Received List ] Get Received ',
 );
 
 export const addItemTorecevied = createAction(
-    '[Add Item To Recevied Component] Add Item To Recevied',
+    '[Add Item To Recevied ] Add Item To Recevied',
     props<{ item: Item }>()
   );

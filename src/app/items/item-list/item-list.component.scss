@@ -16,14 +16,9 @@
 
     .card {
       margin: 0 20px 20px;
-      width: min-content;
-      
+      min-width: 25%;
+            
       .mat-card-header {
-        ::ng-deep {
-          .mat-card-header-text {
-            width: 100%;
-          }
-        }
 
         .loding-cur {
           display: inline-block;
@@ -35,11 +30,6 @@
           align-items: flex-end;
         }
       }
-    }
-
-    .mat-card-actions {
-      display: flex;
-      justify-content: flex-end;
     }
   }
 }

@@ -3,12 +3,12 @@ import { Item } from '../../models/item.model';
 
   
 export const addItem = createAction(
-    '[Item Add Component] Add Item',
+    '[Add Item] Add Item',
     props<{ item: any }>()
   );
 
 export const removeItem = createAction(
-  "[Item Components] Remove Item",
+  "[Remove Item] Remove Item",
   props<{ id: Item }>()
 );
 

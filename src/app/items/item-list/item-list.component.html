@@ -13,19 +13,20 @@
   <div class="container-item-list" *ngIf="items$  | async as items">
     <mat-card class="card" *ngFor="let item of items | sortData: '' ">
       <mat-card-header>
-        <mat-card-title>{{ item.itemName }}</mat-card-title>
-        <mat-card-subtitle>{{ item.onlineStore }}</mat-card-subtitle>
+        <mat-card-title>{{ item.itemName | titlecase}}</mat-card-title>
+        <mat-card-subtitle>{{ item.onlineStore | titlecase }}</mat-card-subtitle>
         <mat-card-subtitle>{{ item.price | currency:"ILS":"symbol" }}</mat-card-subtitle>
 
-        <mat-card-subtitle *ngIf="isLoading">{{ item.price / currenyRate?.ILS  | currency:"USD":"symbol" }}
-          <div class="loding-cur">Loading Currency Price...</div>
+        <mat-card-subtitle >{{ item.price / currenyRate?.ILS  | currency:"USD":"symbol" }}
+          <div class="loding-cur" *ngIf="isLoading">Loading Currency Price...</div>
         </mat-card-subtitle>
 
         <mat-card-subtitle>{{ item.deliveryDate | date: 'dd/MM/yyyy' }}</mat-card-subtitle>
-        <mat-card-actions>
-          <button mat-button color="primary" type="submit" (click)="receivedItem(item)">Received </button>
-        </mat-card-actions>
+
       </mat-card-header>
+      <mat-card-actions>
+        <button mat-button color="primary" type="submit" (click)="receivedItem(item)">Received </button>
+      </mat-card-actions>
     </mat-card>
   </div>
 </div>

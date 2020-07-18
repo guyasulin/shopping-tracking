@@ -1,16 +1,17 @@
-::ng-deep{
-    .items-container {
-        .mat-tab-group {
-          padding: 20px;
-      
-          .mat-tab-header {
-            border-bottom: none;;
-            margin-bottom: 20px;
-            
-              .mat-tab-label {
-                border: 1px solid rgba(0,0,0,.12);
-              }
-          }
+::ng-deep {
+  .items-container {
+    .mat-tab-group {
+      padding: 20px;
+
+      .mat-tab-header {
+        border-bottom: none;
+        ;
+        margin-bottom: 20px;
+
+        .mat-tab-label {
+          border: 1px solid rgba(0, 0, 0, .12);
         }
       }
+    }
+  }
 }

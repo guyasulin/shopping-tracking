@@ -12,6 +12,7 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { StoreListComponent } from './store-list/store-list.component';
 import { ItemsComponent } from './items.component';
 import { SortDataPipe } from '../pipes/sort-data.pipe';
+import { ItemCasePipeDirective } from './Directive/item-case-pipe.directive';
 
 const routes: Routes = [
 	{ path: 'item-list', component: ItemListComponent },
@@ -28,7 +29,8 @@ const routes: Routes = [
     ItemAddComponent,
     StoreListComponent,
     ItemsComponent,
-    SortDataPipe
+    SortDataPipe,
+    ItemCasePipeDirective,
   ],
   imports: [
     CommonModule, 

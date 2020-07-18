@@ -18,7 +18,8 @@ export class StoreListComponent implements OnInit {
  public storeList = {};
  public takeUntill$: Subject<void> = new Subject<void>();
  public currenyRate: Rates;
-  
+ public isLoading = true;
+
   constructor(private store: Store<fromStore.ItemState>, public itemService: ItemService) { }
 
   ngOnInit(): void {
@@ -37,6 +38,11 @@ export class StoreListComponent implements OnInit {
 		.subscribe(
 			data => {
 				this.currenyRate = data;
+					this.isLoading = false;
+			},
+			(err) => {
+				this.isLoading = false
+				return err;
 			}
 		);
   }
