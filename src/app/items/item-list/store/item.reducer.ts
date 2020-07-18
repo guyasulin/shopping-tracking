@@ -9,15 +9,8 @@ export interface ItemState {
 	items: Item[];
 }
 
-const items: Item[] = [
-	{
-		id: 1,
-		itemName: 'samsung A7',
-		onlineStore: 'Amazon',
-		price: 40,
-		deliveryDate: '2019-10-01'
-	}
-];
+const items: Item[] = [];
+
 export const initialState = {
 	error: undefined,
 	items
